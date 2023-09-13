@@ -1,0 +1,32 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 100% thì 1rem = 16px khi quy đổi ra 12 13px thì bất thuận tiện*/
+                      /* 62,5% thì 1rem = 10px khi muốn sang 12px thì là 1.2rem*/
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;;
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 1200px;
+    min-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+}
