@@ -1,5 +1,5 @@
 .header{
-    height: 120px;
+    height: var(--header-height);
     background-image: linear-gradient(0, #fe6433, #f53e2d);
 }
 
@@ -11,7 +11,7 @@
 .header__navbar-list{
     list-style: none;
     padding-left: 0;
-    margin-top: 4px;
+    margin: 4px 0 0 0;
 }
 
 .header__navbar-item{
@@ -273,6 +273,8 @@ bằng cánh dùng border rỗng và làm dày các cạnh lên */
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 12px;
 }
 
 .auth-form__heading{
@@ -352,7 +354,8 @@ bằng cánh dùng border rỗng và làm dày các cạnh lên */
 }
 
 .auth-form__socials-title{
-    margin: 0 36px;
+    /* margin: 0 36px;  magin cho form đăng ký */
+    margin: 0 24px;
 }
 
 .auth-form__socials-google{
@@ -363,4 +366,40 @@ bằng cánh dùng border rỗng và làm dày các cạnh lên */
     width: 22px;
     height: 22px;
     object-fit: contain;
+}
+
+.auth-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #939393;
+}
+
+.auth-form__help-separate{
+    display: block;
+    height: 22px;
+    margin: -1px 16px 0;
+    border-left: 1px solid #EAEAEA;
+}
+
+.auth-form__help-forgot{
+    color: var(--primary-color);
+}
+
+/* Header with search */
+.header-with-search{
+    height: var(--header-with-search--height);
+}
+
+.header__logo{
+    width: 200px;
+}
+
+.header__logo-img{
+    width: 150px;
+    color: var(--white-color);
 }

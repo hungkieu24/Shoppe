@@ -4,6 +4,10 @@
     --black-color: #000;
     --text-color: #333;
     --border-color:#dbdbdb;
+
+    --header-height:120px;
+    --navbar-height: 34px; 
+    --header-with-search--height: calc(var(--header-height) - var(--navbar-height)):
 }
 
 *{
@@ -46,11 +50,23 @@ html {
     }
 }
 
+@keyframes growth {
+    from
+    {
+        transform: scale(var(--growth-from));
+    }
+    to 
+    {
+        transform: scale(var(--growth-to));
+    }
+}
+
 /* Modla */
 .modal{
     position: absolute;
     display: flex;
     inset: 0 0 0 0; /* thay thế cho top:0 bottom:0 right:0 left:0*/
+    animation: fadeIn linear 0.2s;
 }
 
 .modal__overlay{
@@ -61,8 +77,12 @@ html {
 }
 
 .modal__body {
+    --growth-from:0.7;
+    --growth-to:1;
     margin: auto;
+    position: relative;
     z-index: 1;
+    animation: growth linear 0.1s;
 }
 
 /* Button style */
@@ -81,6 +101,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 1.6rem;
 }
 
 .btn.btn--normal:hover {
